@@ -1,0 +1,48 @@
+{
+    "name": "Chhavi.io",
+    "version": "1.0.0",
+    "description": "Artist | Storyteller | Facilitator",
+    "scripts": {
+        "audit:fix": "npx yarn-audit-fix",
+        "dev": "gulp",
+        "test": "true",
+        "build": "gulp build",
+        "deploy": "gh-pages-deploy",
+        "clean": "rm -rf dist"
+    },
+    "gh-pages-deploy": {
+        "staticpath": "dist",
+        "cname": "chhavi.io",
+        "prep": [
+            "build"
+        ],
+        "post": [
+            "clean"
+        ],
+        "noprompt": true
+    },
+    "author": "Chhavi Agrawal",
+    "license": "CC3.0",
+    "devDependencies": {
+        "browser-sync": "^2.26.12",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-cache": "^1.1.3",
+        "gulp-cli": "^2.3.0",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-inject": "^5.0.5",
+        "gulp-minify": "^3.1.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "handlebars": "^4.7.6",
+        "imagemin-gifsicle": "^7.0.0",
+        "imagemin-jpegtran": "^7.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "imagemin-svgo": "^8.0.0",
+        "js-md5": "^0.7.3",
+        "panini": "^1.7.1",
+        "sass": "^1.26.10"
+    }
+}
