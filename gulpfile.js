@@ -5,7 +5,7 @@
 
 var gulp = require('gulp'),
   browsersync = require('browser-sync').create(),
-  sass = require('gulp-sass'),
+  sass = require('gulp-sass')(require('sass')),
   del = require('del'),
   panini = require('panini'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -84,7 +84,7 @@ const sassT = () => {
       outputStyle: 'expanded',
       sourceComments: 'map',
       sourceMap: 'sass',
-      outputStyle: 'nested'
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(cssnano()) // Use cssnano to minify CSS
