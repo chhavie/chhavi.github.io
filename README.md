@@ -9,5 +9,5 @@ gulp
 
 ```
 gulp build
-# Push code from your editor/github
+Push code from your editor/github
 ```
